@@ -2,6 +2,9 @@ package com.regosen.dailyfuzzy.util;
 
 import android.util.Log;
 
+import com.regosen.dailyfuzzy.models.Post;
+import com.regosen.dailyfuzzy.utils.FuzzyHelper;
+
 import junit.framework.TestCase;
 
 import org.json.JSONObject;
@@ -38,6 +41,22 @@ public class PostTest extends TestCase {
 		assertEquals("jpeg", Post.getExtension("http://example.com/test.jpeg"));
 		assertEquals("gif", Post.getExtension("http://example.com/test.gotcha.GIF"));
 		assertEquals(null, Post.getExtension(null));
+	}
+
+	public void testObfuscation() {
+		String testString = "a,b,c,d,e";
+		byte[] obfuscatedString = FuzzyHelper.obfuscate(testString);
+		String reconvertedString = FuzzyHelper.deobfuscate(obfuscatedString);
+		assertEquals(testString, reconvertedString);
+
+		// copy console output to generate a new obfuscated variable
+		StringBuilder sb = new StringBuilder();
+		sb.append("new byte[] {");
+		for (byte num : obfuscatedString) {
+			sb.append(String.format("(byte)0x%02X,", num));
+		}
+		sb.append("};");
+		Log.d(PostTest.class.getName(), sb.toString());
 	}
 
 	// ------------------------------------
