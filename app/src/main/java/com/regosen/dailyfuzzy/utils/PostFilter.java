@@ -29,40 +29,7 @@ public class PostFilter {
 
     // obfuscating toxic words, to make sure they can't be seen even when inspecting app data
     static private byte[] getToxicSubstringData() {
-        return new byte[] {
-                (byte)0x10,
-                (byte)0x33,
-                (byte)0x19,
-                (byte)0x5C,
-                (byte)0xED,
-                (byte)0x20,
-                (byte)0xE9,
-                (byte)0xA2,
-                (byte)0xD3,
-                (byte)0xF9,
-                (byte)0x21,
-                (byte)0x53,
-                (byte)0x9B,
-                (byte)0xFF,
-                (byte)0xBC,
-                (byte)0xD2,
-                (byte)0x03,
-                (byte)0xB1,
-                (byte)0x90,
-                (byte)0x62,
-                (byte)0xE7,
-                (byte)0x41,
-                (byte)0xCE,
-                (byte)0xF2,
-                (byte)0x63,
-                (byte)0xA9,
-                (byte)0x38,
-                (byte)0x52,
-                (byte)0x87,
-                (byte)0x06,
-                (byte)0xB2,
-                (byte)0x4C,
-        };
+        return new byte[] {(byte)0xC4,(byte)0x0D,(byte)0xAA,(byte)0x11,(byte)0xC8,(byte)0x5B,(byte)0x7A,(byte)0x0F,(byte)0xAD,(byte)0xD4,(byte)0x9C,(byte)0xAD,(byte)0x09,(byte)0xD6,(byte)0xCD,(byte)0x29,(byte)0xA7,(byte)0x6F,(byte)0x7B,(byte)0xB6,(byte)0xE9,(byte)0x34,(byte)0x8E,(byte)0x4C,(byte)0x8E,(byte)0x77,(byte)0x8C,(byte)0x05,(byte)0x5A,(byte)0x87,(byte)0x0E,(byte)0x89};
     }
 
     private List<Pattern> regexArrayFromPrefixes(String[] prefixes) {

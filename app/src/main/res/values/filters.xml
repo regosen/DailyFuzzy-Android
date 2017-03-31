@@ -48,6 +48,8 @@
         <item>disabled</item>
         <item>cancer</item>
         <item>blind</item>
+        <item>bald</item>
+        <item>hairless</item>
     </string-array>
 
     <string-array name="whitelist_prefixes">
