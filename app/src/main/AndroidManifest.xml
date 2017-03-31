@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.regosen.dailyfuzzy" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application
+        android:name=".DailyFuzzyApp"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activities.PictureActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PostsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activities.FavoritesActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activities.HelpActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <receiver android:name=".receivers.NotificationReceiver" />
+        <receiver android:name=".receivers.BootReceiver"
+            android:enabled="false">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+        </intent-filter>
+    </receiver>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d7107b75f7df4f08b0d47b741ee07f1e58923526" />
+    </application>
+
+</manifest>

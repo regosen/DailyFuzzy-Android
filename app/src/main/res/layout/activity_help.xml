@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context=".HelpActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_about"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_darkgray"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:stateListAnimator="@drawable/button_state_list_anim_material">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/help_about"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_show_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_darkgray"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:stateListAnimator="@drawable/button_state_list_anim_material">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/help_show_instruction"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_how_to_post"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_darkgray"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:stateListAnimator="@drawable/button_state_list_anim_material">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/help_how_to_post"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_email_dev"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_button_darkgray"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:stateListAnimator="@drawable/button_state_list_anim_material">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/help_email_dev"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+</LinearLayout>

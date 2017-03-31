@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PictureFragment">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/img_fuzzy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:src="@drawable/please_wait"/>
+
+    <RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"              
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="center"
+      android:gravity="center">
+
+        <VideoView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/vid_fuzzy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            style="@style/Widget.AppCompat.ProgressBar"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

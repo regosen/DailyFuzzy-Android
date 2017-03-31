@@ -1,0 +1,26 @@
+# built application files
+
+*.apk
+*.ap_
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+!app/libs/*.jar
+lint
+*.iml
+*.dex
+*.class
+
+# generated files
+bin/
+gen/
+classes/
+local.properties
+.idea/
+.DS_Store
+*.swp
+*.bak
+.gradle
+build/
+captures/
+
+app/manifest-merger-release-report.txt

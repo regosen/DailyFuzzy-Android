@@ -1,0 +1,66 @@
+<resources>
+    <string-array name="overridable_blacklist_prefixes">
+        <item>kid</item>
+        <item>parent</item>
+        <item> prom </item>
+        <item>father</item>
+        <item>dad</item>
+        <item>mom</item>
+        <item>son</item>
+        <item>daughter</item>
+        <item>niece</item>
+        <item>nephew</item>
+        <item>toddler</item>
+        <item>child</item>
+        <item>boy</item>
+        <item>girl</item>
+        <item>premature</item>
+        <item>autis</item>
+        <item>aspergers</item>
+        <item>wedding</item>
+        <item>ring bearer</item>
+        <item> man </item>
+        <item>grandmother</item>
+        <item>grandfather</item>
+        <item>grandma</item>
+        <item>grandpa</item>
+        <item>husband</item>
+        <item>wife</item>
+        <item>letter</item>
+        <item>message</item>
+        <item>brother</item>
+        <item>sister</item>
+        <item>cousin</item>
+    </string-array>
+
+    <string-array name="non_overridable_blacklist_prefixes">
+        <item>one eye</item>
+        <item>missing eye</item>
+        <item>missing an eye</item>
+        <item>lost an eye</item>
+        <item>lost a leg</item>
+        <item>lost his leg</item>
+        <item>lost her leg</item>
+        <item>missing a leg</item>
+        <item>missing leg</item>
+        <item>3 legs</item>
+        <item>three legs</item>
+        <item>disabled</item>
+        <item>cancer</item>
+        <item>blind</item>
+    </string-array>
+
+    <string-array name="whitelist_prefixes">
+        <item>pet</item>
+        <item>pup</item>
+        <item>dog</item>
+        <item>cat</item>
+        <item>kitt</item>
+        <item>rabbit</item>
+        <item>bunny</item>
+        <item>hamster</item>
+        <item>good boy</item>
+        <item>good girl</item>
+    </string-array>
+
+</resources>
