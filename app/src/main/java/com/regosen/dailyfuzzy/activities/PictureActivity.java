@@ -36,6 +36,8 @@ import android.widget.Toast;
 
 import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 import com.regosen.dailyfuzzy.R;
 import com.regosen.dailyfuzzy.cache.FuzzyCache;
 import com.regosen.dailyfuzzy.fragments.PictureFragment;
@@ -53,6 +55,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 
 import static com.regosen.dailyfuzzy.R.id.pager;
+import static com.regosen.dailyfuzzy.fragments.PictureFragment.PictureType.PIC_VIDEO;
 import static com.regosen.dailyfuzzy.models.PostFetcher.PostType.POST_NEW;
 
 public class PictureActivity extends AppCompatActivity {
@@ -303,6 +306,33 @@ public class PictureActivity extends AppCompatActivity {
         }
     }
 
+    private void shareOnFacebook(String caption, String imageURL) {
+        if (!ShareDialog.canShow(ShareLinkContent.class)) {
+            Toast.makeText(getApplicationContext(), getString(R.string.share_error), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // replace gif/video with still image
+        String stillImageURL = imageURL.replace(".gifv", "l.gif");
+        if (sVisibleFragment.mPicType == PIC_VIDEO)
+        {
+            Post post = mPostFetcher.getPostById(sVisibleFragment.mPostId);
+            if (post == null) {
+                return;
+            }
+            stillImageURL = post.thumb;
+        }
+
+        ShareLinkContent content = new ShareLinkContent.Builder()
+                .setContentTitle(caption)
+                .setContentDescription(getString(R.string.share_description))
+                .setContentUrl(Uri.parse(imageURL))
+                .setImageUrl(Uri.parse(stillImageURL))
+                .build();
+        ShareDialog shareDialog = new ShareDialog(this);
+        shareDialog.show(content, ShareDialog.Mode.FEED);
+    }
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -336,6 +366,10 @@ public class PictureActivity extends AppCompatActivity {
             case R.id.action_favorites_del:
                 mPostFetcher.removeFromFavorites(sVisibleFragment.mPostId);
                 Toast.makeText(getApplicationContext(), getString(R.string.toast_favorites_removed), Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.action_share:
+                shareOnFacebook(sVisibleFragment.mCaption, sVisibleFragment.mImageURL);
                 return true;
 
             default:

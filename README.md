@@ -14,6 +14,7 @@ This is my first Android project from scratch, and it contains some template cod
 
 - save images to your device
 - track favorites and past images
+- share on Facebook
 - daily notifications
 
 ## Screenshots
