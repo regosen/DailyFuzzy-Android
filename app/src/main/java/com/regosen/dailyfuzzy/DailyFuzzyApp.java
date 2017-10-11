@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
-import com.facebook.FacebookSdk;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -17,7 +16,6 @@ public class DailyFuzzyApp extends Application implements Application.ActivityLi
     public void onCreate() {
         super.onCreate();
         Fabric.with(this, new Crashlytics());
-        FacebookSdk.sdkInitialize(getApplicationContext());
         registerActivityLifecycleCallbacks(this);
     }
 
